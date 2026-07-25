@@ -1,0 +1,5 @@
+.git
+.gitignore
+.DS_Store
+config/database.local.php
+*.log

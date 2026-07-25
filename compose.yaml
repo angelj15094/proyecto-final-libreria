@@ -1,0 +1,40 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: development
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: dblibreria
+      DB_USER: libreria
+      DB_PASSWORD: libreria_segura
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: dblibreria
+      MYSQL_USER: libreria
+      MYSQL_PASSWORD: libreria_segura
+      MYSQL_ROOT_PASSWORD: root_local_segura
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_local_segura"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - "./database/Base Datos Libreria.sql:/docker-entrypoint-initdb.d/00_base.sql:ro"
+      - "./database/01_contacto_y_compatibilidad.sql:/docker-entrypoint-initdb.d/01_compatibilidad.sql:ro"
+
+volumes:
+  mysql_data:
