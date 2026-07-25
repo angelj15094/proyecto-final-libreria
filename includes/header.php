@@ -5,7 +5,7 @@ declare(strict_types=1);
 $pageTitle = $pageTitle ?? 'Librería Horizonte';
 $pageDescription = $pageDescription ?? 'Catálogo de libros y autores de Librería Horizonte.';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">

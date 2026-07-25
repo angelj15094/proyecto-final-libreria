@@ -67,7 +67,7 @@ require __DIR__ . '/includes/header.php';
             </div>
         </div>
 
-        <div class="hero__visual" aria-label="Selección de libros de Librería Horizonte" data-reveal>
+        <div class="hero__visual" role="img" aria-label="Selección de libros de Librería Horizonte" data-reveal>
             <div class="book-stack" aria-hidden="true">
                 <div class="book book--one"><span>Ideas</span></div>
                 <div class="book book--two"><span>Sabores</span></div>

@@ -131,18 +131,18 @@ require __DIR__ . '/includes/header.php';
         </aside>
 
         <div class="contact-form-card" data-reveal>
-            <?php if ($flashMessage): ?>
+<?php if ($flashMessage): ?>
                 <div class="alert alert--<?= e($flashMessage['type']) ?>" role="status" data-alert>
                     <p><?= e($flashMessage['message']) ?></p>
                     <button type="button" aria-label="Cerrar mensaje" data-alert-close>×</button>
                 </div>
-            <?php endif; ?>
+<?php endif; ?>
 
-            <?php if (isset($errors['general'])): ?>
+<?php if (isset($errors['general'])): ?>
                 <div class="alert alert--error" role="alert">
                     <p><?= e($errors['general']) ?></p>
                 </div>
-            <?php endif; ?>
+<?php endif; ?>
 
             <form class="contact-form" action="contacto.php" method="post" novalidate data-contact-form>
                 <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
