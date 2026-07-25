@@ -6,6 +6,8 @@ mensajes enviados desde un formulario de contacto.
 
 Repositorio público: https://github.com/angelj15094/proyecto-final-libreria
 
+Sitio publicado: https://libreria-horizonte.infinityfreeapp.com/
+
 ## Funciones
 
 - Inicio con resumen del catálogo y libros destacados.
@@ -79,6 +81,5 @@ contacto.php  Formulario y persistencia
 
 ## Publicación recomendada
 
-El proyecto está preparado para un hosting gratuito con PHP 8 y MySQL, como
-InfinityFree. El repositorio público debe excluir toda contraseña mediante el
-archivo `.gitignore`.
+El proyecto está publicado en InfinityFree con PHP y MySQL. El repositorio
+público excluye toda contraseña mediante el archivo `.gitignore`.
